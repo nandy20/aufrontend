@@ -5,14 +5,15 @@ class  Session extends React.Component {
     
     onSub = (e) => {
         e.preventDefault();
-        console.log(e.target.elements.assignment_name.value);
+        
         axios.post('http://localhost:8080/api/session/save', {
             session_id:e.target.elements.session_id.value,
             session_name:e.target.elements.session_name.value,
             trainer_id:e.target.elements.trainer_id.value,
+            session_date:e.target.elements.session_date.value,
             start_time:e.target.elements.start_time.value,
             end_time:e.target.elements.end_time.value,
-            batch_id:e.target.elements.batch_id.value,
+            batchid:e.target.elements.batch_id.value,
             
     }).then(response => {
         console.log(response);
@@ -35,11 +36,11 @@ class  Session extends React.Component {
                  </div>
                  <div className="form-group">
                  <label htmlFor="start_time">Start time</label>
-                 <input type= "time" name="start_time" id="start_time"/>
+                 <input type= "text" name="start_time" id="start_time"/>
                  </div>
                  <div className="form-group">
                  <label htmlFor="end_time">End time</label>
-                 <input type= "time" name="end_time" id="end_time"/>
+                 <input type= "text" name="end_time" id="end_time"/>
                  </div>
                  <div className="form-group">
                  <label htmlFor="trainer_id">Trainer id</label>
@@ -51,7 +52,7 @@ class  Session extends React.Component {
                  </div>
                  <div className="form-group">
                  <label htmlFor="batch_id">Batch id</label>
-                 <input type= "date" name="batch_id" id="batch_id"/>
+                 <input type= "number" name="batch_id" id="batch_id"/>
                  </div>
 
                 <input type="submit" value="Add Session" />

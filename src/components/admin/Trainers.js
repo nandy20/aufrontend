@@ -5,14 +5,13 @@ class  Trainers extends React.Component {
     
     onSub = (e) => {
         e.preventDefault();
-        console.log(e.target.elements.assignment_name.value);
+        console.log(e.target.elements.trainer_name.value);
         axios.post('http://localhost:8080/api/trainer/save', {
             trainer_id:e.target.elements.trainer_id.value,
            trainer_name:e.target.elements.trainer_name.value,
            trainer_email:e.target.elements.trainer_email.value,
-           trainer_mobile:e.target.elements.trainer_mobile_no.value,
-           trainer_username:e.target.elements.trainer_username.value,
-           trainer_password:e.target.elements.trainer_password.value,
+           trainerUsername:e.target.elements.trainer_username.value,
+           trainerPwd:e.target.elements.trainer_password.value,
     }).then(response => {
         console.log(response);
         alert(response);
@@ -21,7 +20,7 @@ class  Trainers extends React.Component {
  render(){
 
     return (
-        <form>
+        <form onSubmit={this.onSub}>
             <div className="form-inner">
                  <h2>Trainer</h2>
                  <div className="form-group">
@@ -38,11 +37,11 @@ class  Trainers extends React.Component {
                  <input type= "text" name="trainer_email" id="trainer_email"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="trainer_username">Mobile No</label>
+                 <label htmlFor="trainer_username">username</label>
                  <input type= "text" name="trainer_username" id="trainer_username"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="trainer_password">Mobile No</label>
+                 <label htmlFor="trainer_password">password</label>
                  <input type= "text" name="trainer_password" id="trainer_password"/>
                  </div>
                 <input type="submit" value="Add Trainer" />

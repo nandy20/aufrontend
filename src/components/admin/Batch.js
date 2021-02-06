@@ -5,10 +5,10 @@ class  Batch extends React.Component {
     
     onSub = (e) => {
         e.preventDefault();
-        console.log(e.target.elements.assignment_name.value);
+        
         axios.post('http://localhost:8080/api/batch/save', {
             batch_id:e.target.elements.batch_id.value,
-            batch_name:e.target.elements.batch_name.value,
+            btach_name:e.target.elements.batch_name.value,
            
     }).then(response => {
         console.log(response);

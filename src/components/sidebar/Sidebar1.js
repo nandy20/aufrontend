@@ -35,18 +35,13 @@ const Sidebar1 = ({ sidebarOpen, closeSidebar }) => {
           <i className="fa fa-user-secret" aria-hidden="true"></i>
           <a href="/admin/auers">Add Auers</a>
         </div>
-        
         <div className="sidebar__link">
           <i className="fa fa-archive"></i>
-          <a href="/admin/group">Group</a>
+          <a href="/admin/projects1">Add Projects</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-archive"></i>
-          <a href="/admin/projects1">Projects</a>
-        </div>
-        <div className="sidebar__link">
-          <i className="fa fa-archive"></i>
-          <a href="/admin/sessions">Sessions</a>
+          <a href="/admin/sessions">Add Sessions</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-archive"></i>
@@ -62,7 +57,7 @@ const Sidebar1 = ({ sidebarOpen, closeSidebar }) => {
         </div>
         <div className="sidebar__link">
           <i className="fa fa-handshake-o"></i>
-          <a href="/admin/viewgroups">View Groups</a>
+          <a href="/admin/viewgroups">View Projects</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-handshake-o"></i>
