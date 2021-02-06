@@ -23,6 +23,10 @@ import ViewBatch from "./components/admin/ViewBatch";
 import ViewAuers from "./components/admin/ViewAuers";
 import ViewGroup from "./components/admin/ViewGroup";
 import ViewTrainers from "./components/admin/ViewTrainers";
+import LoginForm from "./components/login/LoginForm";
+import Nav from "./components/login/Nav";
+import LoginForm1 from "./components/login/LoginForm1";
+import LoginForm3 from "./components/login/LoginForm3";
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
   const openSidebar = () => {
@@ -42,7 +46,7 @@ const App = () => {
       <Route path="/student" component={Sidebar2 }/>
       
       </Switch>
-      <Navbar />
+      
       
      
       
@@ -70,7 +74,14 @@ const App = () => {
       <Route path="/student/Assignments" component={SAssignments}/>
       <Route path="/student/sessions" component={VSessions} />
 
+      <Route path="/login/admin" component={LoginForm} />
+      
+      <Route path="/login/trainer" component={LoginForm1} />
+      <Route path="/login/students" component={LoginForm3} />
+      <Route path="/" component={Nav} />
+      
     </Switch>
+    
     
   
     </div>
