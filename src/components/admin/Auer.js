@@ -28,6 +28,7 @@ class  Auer extends React.Component {
     }
  render(){
     return (
+        <div >
         <form onSubmit={this.onSub}>
             <ToastContainer />
             <div className="form-inner" >
@@ -69,7 +70,7 @@ class  Auer extends React.Component {
 
 
         </form>
-
+        </div>
     )
  }
 }

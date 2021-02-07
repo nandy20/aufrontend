@@ -34,7 +34,7 @@ class  Session extends React.Component {
             <div className="form-inner">
                  <h2>Session</h2>
                  <div className="form-group">
-                     <label htmlFor="session_id">Id</label>
+                     <label htmlFor="session_id">Session Id</label>
                      <input type="number" name="session_id" id="session_id"/>
                  </div>
 
@@ -43,15 +43,15 @@ class  Session extends React.Component {
                  <input type= "text" name="session_name" id="session_name"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="start_time">Start time</label>
+                 <label htmlFor="start_time">Start Time</label>
                  <input type= "text" placeholder="2021-02-04T17:43:00" name="start_time" id="start_time"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="end_time">End time</label>
+                 <label htmlFor="end_time">End Time</label>
                  <input type= "text" placeholder="2021-02-04T17:43:00" name="end_time" id="end_time"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="trainer_id">Trainer id</label>
+                 <label htmlFor="trainer_id">Trainer Id</label>
                  <input type= "number" name="trainer_id" id="trainer_id"/>
                  </div>
                  <div className="form-group">
@@ -59,7 +59,7 @@ class  Session extends React.Component {
                  <input type= "date" name="session_date" id="session_date"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="batch_id">Batch id</label>
+                 <label htmlFor="batch_id">Batch Id</label>
                  <input type= "number" name="batch_id" id="batch_id"/>
                  </div>
 

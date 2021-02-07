@@ -28,7 +28,7 @@ class ViewSession extends React.Component{
           <ToastContainer />
         <form onSubmit={this.sub}>
           
-          <label htmlFor="batch_id">Batch_number</label>
+          <label htmlFor="batch_id">Batch Number</label>
           <input type="text" id="batch" />
           <input type= "Submit" value="get details" />
         </ form>

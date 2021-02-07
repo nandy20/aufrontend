@@ -29,12 +29,12 @@ class  Batch extends React.Component {
             <div className="form-inner">
                  <h2>Batch</h2>
                  <div className="form-group">
-                     <label htmlFor="batch_id">Batch_id</label>
+                     <label htmlFor="batch_id">Batch Id</label>
                      <input type="number" name="batch_id" id="batch_id"/>
                  </div>
 
                  <div className="form-group">
-                 <label htmlFor="batch_name">Batch_name</label>
+                 <label htmlFor="batch_name">Batch Name</label>
                  <input type= "text" name="batch_name" id="batch_name"/>
                  </div>
                  

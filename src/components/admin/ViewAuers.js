@@ -35,7 +35,7 @@ class ViewAuer extends React.Component{
         <form onSubmit={this.sub}>
           <h1>List of Auers</h1>
 
-          <label htmlFor="batch_id">Batch_number</label>
+          <label htmlFor="batch_id">Batch Number</label>
           <input type="text" id="batch" />
           <input type= "Submit" value="get details" />
         </ form>
@@ -49,10 +49,10 @@ class ViewAuer extends React.Component{
         <br />
           <table id="customers" cellpadding="100" style={{visibility:this.state.visi}}>
             <tr>
-              <th>Student id </th>
-              <th>Student name </th>
-              <th>Student email </th>
-              <th>Student mobile </th>
+              <th>Student Id </th>
+              <th>Student Name </th>
+              <th>Student Email </th>
+              <th>Student Mobile </th>
               <th>Batch Id </th>
               <th>Student Username </th>
               <th>Student Password </th>

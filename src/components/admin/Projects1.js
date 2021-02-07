@@ -31,12 +31,12 @@ class  Projects1 extends React.Component {
             <div className="form-inner">
                  <h2>Project Question Submission</h2>
                  <div className="form-group">
-                     <label htmlFor="project_id">Project_id</label>
+                     <label htmlFor="project_id">Project Id</label>
                      <input type="number" name="project_id" id="project_id"/>
                  </div>
 
                  <div className="form-group">
-                 <label htmlFor="project_name">project_name</label>
+                 <label htmlFor="project_name">Project Name</label>
                  <input type= "text" name="project_name" id="project_name"/>
                  </div>
                  <div className="form-group">

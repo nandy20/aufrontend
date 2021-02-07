@@ -32,24 +32,24 @@ class  Trainers extends React.Component {
             <div className="form-inner">
                  <h2>Trainer</h2>
                  <div className="form-group">
-                     <label htmlFor="trainer_id">Id</label>
+                     <label htmlFor="trainer_id">Trainer Id</label>
                      <input type="number" name="trainer_id" id="trainer_id"/>
                  </div>
 
                  <div className="form-group">
-                 <label htmlFor="trainer_name">Name</label>
+                 <label htmlFor="trainer_name">Trainer Name</label>
                  <input type= "text" name="trainer_name" id="trainer_name"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="trainer_email">Email</label>
+                 <label htmlFor="trainer_email">Trainer Email</label>
                  <input type= "text" name="trainer_email" id="trainer_email"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="trainer_username">username</label>
+                 <label htmlFor="trainer_username">Trainer Username</label>
                  <input type= "text" name="trainer_username" id="trainer_username"/>
                  </div>
                  <div className="form-group">
-                 <label htmlFor="trainer_password">password</label>
+                 <label htmlFor="trainer_password">Trainer Password</label>
                  <input type= "text" name="trainer_password" id="trainer_password"/>
                  </div>
                 <input type="submit" value="Add Trainer" />

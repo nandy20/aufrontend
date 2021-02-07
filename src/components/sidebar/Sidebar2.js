@@ -26,7 +26,7 @@ const Sidebar2 = ({ sidebarOpen, closeSidebar }) => {
        
         <div className="sidebar__link">
           <i className="fa fa-handshake-o"></i>
-          <a href="/student/sessions">View sessions</a>
+          <a href="/student/sessions">View Sessions</a>
         </div>
         
         

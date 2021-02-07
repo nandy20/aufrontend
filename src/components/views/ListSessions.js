@@ -35,11 +35,11 @@ render(){
             <table id="customers" style={{visibility:this.state.visi}}>
 
 <tr>
-  <th>Session id</th>
-  <th>Session name</th>
-  <th>Session date</th>
-  <th>Start time</th>
-  <th>End time</th>
+  <th>Session Id</th>
+  <th>Session Name</th>
+  <th>Session Date</th>
+  <th>Start Time</th>
+  <th>End Time</th>
 </tr>
 {this.state.sessions.map(session=>(
       <tr>

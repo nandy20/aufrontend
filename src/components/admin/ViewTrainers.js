@@ -28,9 +28,9 @@ render(){
               <table id="customers">
 
   <tr>
-    <th>Trainer id</th>
-    <th>Trainer name</th>
-    <th>Trainer email</th>
+    <th>Trainer Id</th>
+    <th>Trainer Name</th>
+    <th>Trainer Email</th>
     <th>Trainer Username</th>
     <th>Trainer Password</th>
   </tr>

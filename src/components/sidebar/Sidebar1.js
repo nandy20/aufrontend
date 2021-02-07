@@ -20,7 +20,7 @@ const Sidebar1 = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__menu">
       <div className="sidebar__link">
           <i className="fa fa-user-secret" aria-hidden="true"></i>
-          <a href="/admin/dashboard">admin</a>
+          <a href="/admin/dashboard">Admin</a>
         </div>
         
         <div className="sidebar__link">

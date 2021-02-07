@@ -48,7 +48,7 @@ class  Attendance extends React.Component {
             <h1>Attendance</h1>
             <form onSubmit={this.sub} style={{height:"auto",marginTop:"10%"}}>
             <div >
-                     <label htmlFor="batch_id">Batch_number</label>
+                     <label htmlFor="batch_id">Batch Number</label>
                      <input type="number" name="batch_id" id="batch_id"/>
                  </div>
                  
