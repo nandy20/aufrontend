@@ -8,7 +8,7 @@ class LoginForm3 extends React.Component
         console.log(e.target.elements.student_username.value);
         var trainer_username=e.target.elements.student_username.value;
         var trainer_password=e.target.elements.student_password.value;
-        axios.get('http://1087d3098528.ngrok.io/api/login/student/'+trainer_username+'/'+trainer_password,{
+        axios.get('http://localhost:8080/api/login/student/'+trainer_username+'/'+trainer_password,{
             headers: {'Access-Control-Allow-Origin':'http://1087d3098528.ngrok.io/api/login/student'},
         }).then(response => {
         console.log(response);

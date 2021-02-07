@@ -4,25 +4,35 @@ class  LSessions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-     sessions:[]  
+     sessions:[],
+     visi:"hidden"  
     }
 
   }
-  componentDidMount() {
-    axios.get('http://localhost:8080/api/session/trainer/17')
-    .then(response => {
-      console.log(response.data);
-      this.setState({
-          sessions:response.data  
-      });
-    })
+  sub=(e)=>{
+    e.preventDefault();
+      axios.get('http://localhost:8080/api/session/trainer/'+e.target.elements.trainer.value)
+      .then(response => {
+        console.log(response.data);
+        this.setState({
+            sessions:response.data,
+            visi:"visible"
+        })
+      })
   }
+  
 render(){
 
     return (
         <div>
-            <h1> List of Sessions</h1>
-            <table id="customers">
+          <h1>Sessions Details</h1>
+            <form onSubmit={this.sub}>
+          
+          <label htmlFor="batch_id">Enter your trainer id</label>
+          <input type="text" id="trainer" />
+          <input type= "Submit" value="get details" />
+        </ form>
+            <table id="customers" style={{visibility:this.state.visi}}>
 
 <tr>
   <th>Session id</th>

@@ -73,17 +73,12 @@ const App = () => {
       <Route path="/trainer/assignmentseval" component={Assignments_eval}></Route>
       <Route path="/student/Assignments" component={SAssignments}/>
       <Route path="/student/sessions" component={VSessions} />
-
       <Route path="/login/admin" component={LoginForm} />
       
       <Route path="/login/trainer" component={LoginForm1} />
       <Route path="/login/students" component={LoginForm3} />
       <Route path="/" component={Nav} />
-      
-    </Switch>
-    
-    
-  
+      </Switch>
     </div>
     </Router>
   

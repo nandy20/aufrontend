@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Session.css";
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class  Trainers extends React.Component {
     
     onSub = (e) => {
@@ -13,14 +15,20 @@ class  Trainers extends React.Component {
            trainerUsername:e.target.elements.trainer_username.value,
            trainerPwd:e.target.elements.trainer_password.value,
     }).then(response => {
-        console.log(response);
-        alert(response);
+        if(response.data){
+            toast.success("Successfully saved!!", {
+                position: toast.POSITION.TOP_RIGHT,
+                autoClose: 2000
+              });
+            console.log(response);
+            }
     })
     }
  render(){
 
     return (
         <form onSubmit={this.onSub}>
+            <ToastContainer />
             <div className="form-inner">
                  <h2>Trainer</h2>
                  <div className="form-group">

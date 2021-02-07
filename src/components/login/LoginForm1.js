@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import "./LoginForm.css"
+import Sidebar from '../sidebar/Sidebar';
+import ReactDOM from 'react-dom';
+import "./LoginForm.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class LoginForm1 extends React.Component
 {
     onSub = (e) => {
@@ -9,11 +13,15 @@ class LoginForm1 extends React.Component
         console.log(e.target.elements.trainer_username.value);
         var trainer_username=e.target.elements.trainer_username.value;
         var trainer_password=e.target.elements.trainer_password.value;
-        axios.get('http://8c617c973473.ngrok.io/api/login/trainer/'+trainer_username+'/'+trainer_password,{
+        axios.get('http://localhost:8080/api/login/trainer/'+trainer_username+'/'+trainer_password,{
             headers: {'Access-Control-Allow-Origin':'http://8c617c973473.ngrok.io/api/login/trainer'},
         }).then(response => {
         console.log(response);
-        alert(response);
+        toast.success("Successfully logging in!!", {
+            position: toast.POSITION.TOP_LEFT,
+            autoClose: 2000
+          });
+    
     })
     }
     render(){

@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Assignments.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 class  Assignments extends React.Component {
     
@@ -13,14 +15,20 @@ class  Assignments extends React.Component {
            maximum_marks:e.target.elements.maximum_marks.value,
            deadline:e.target.elements.deadline.value,
     }).then(response => {
-        console.log(response);
-        alert(response);
+        if(response.data){
+            toast.success("Successfully saved!!", {
+                position: toast.POSITION.TOP_RIGHT,
+                autoClose: 2000
+              });
+            console.log(response);
+            }
     })
     }
     render(){
 
     return (
         <form onSubmit={this.onSub}>
+             <ToastContainer />
             <div className="form-inner">
                  <h2>Assignment Creation</h2>
                  <div className="form-group">

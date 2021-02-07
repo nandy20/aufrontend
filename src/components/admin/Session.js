@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Session.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 class  Session extends React.Component {
     
@@ -9,20 +11,26 @@ class  Session extends React.Component {
         axios.post('http://localhost:8080/api/session/save', {
             session_id:e.target.elements.session_id.value,
             session_name:e.target.elements.session_name.value,
-            trainer_id:e.target.elements.trainer_id.value,
+            trainerid:e.target.elements.trainer_id.value,
             session_date:e.target.elements.session_date.value,
             start_time:e.target.elements.start_time.value,
             end_time:e.target.elements.end_time.value,
             batchid:e.target.elements.batch_id.value,
             
     }).then(response => {
-        console.log(response);
-        alert(response);
+        if(response.data){
+            toast.success("Successfully saved!!", {
+                position: toast.POSITION.TOP_RIGHT,
+                autoClose: 2000
+              });
+            console.log(response);
+            }
     })
     }
  render(){
     return (
         <form onSubmit={this.onSub}>
+            <ToastContainer />
             <div className="form-inner">
                  <h2>Session</h2>
                  <div className="form-group">
@@ -36,11 +44,11 @@ class  Session extends React.Component {
                  </div>
                  <div className="form-group">
                  <label htmlFor="start_time">Start time</label>
-                 <input type= "text" name="start_time" id="start_time"/>
+                 <input type= "text" placeholder="2021-02-04T17:43:00" name="start_time" id="start_time"/>
                  </div>
                  <div className="form-group">
                  <label htmlFor="end_time">End time</label>
-                 <input type= "text" name="end_time" id="end_time"/>
+                 <input type= "text" placeholder="2021-02-04T17:43:00" name="end_time" id="end_time"/>
                  </div>
                  <div className="form-group">
                  <label htmlFor="trainer_id">Trainer id</label>

@@ -4,7 +4,7 @@ import { Router } from 'react-router-dom';
 function Nav()
 {
     return (
-        <div>
+        <div className="app">
         <div className="place">
             <p align="left" size="60"><a href="/login/admin">Admin</a></p>
             <br></br>

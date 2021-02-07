@@ -23,10 +23,7 @@ const Sidebar2 = ({ sidebarOpen, closeSidebar }) => {
           <a href="/student/dashboard">Student</a>
         </div>
         
-        <div className="sidebar__link">
-          <i className="fa fa-user-secret" aria-hidden="true"></i>
-          <a href="/student/Assignments">Assignments</a>
-        </div>
+       
         <div className="sidebar__link">
           <i className="fa fa-handshake-o"></i>
           <a href="/student/sessions">View sessions</a>
